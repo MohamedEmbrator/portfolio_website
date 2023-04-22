@@ -49,7 +49,7 @@ section {
 
 .info-back {
     min-height: 100vh;
-    background-image: url(../website/imgs/cover.jpg);
+    background-image: url(imgs/cover.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
