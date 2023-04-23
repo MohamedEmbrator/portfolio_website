@@ -91,16 +91,16 @@ section {
 .info-back h2 span {
     display: inline-block;
     margin-top: 10px;
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 700;
     margin-bottom: 10px;
     color: #4e9eff;
-    word-spacing: 5px;
 }
 
 .info-back h3 {
     display: block;
     font-weight: 700;
+    letter-spacing: 2px;
     font-size: 32px;
     color: white;
     margin-top: 10px;
@@ -110,6 +110,10 @@ section {
 .info-back .work{
     display: inline-block;
     text-decoration: none;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
     border-radius: 15px;
     background-color: #3a6cf4;
     padding: 1em 2.2em;
@@ -119,18 +123,43 @@ section {
     letter-spacing: 1px;
     font-size: 1.1em;
     font-weight: 600;
+    -webkit-transition: 0.7s ease;
+    -moz-transition: 0.7s ease;
+    -ms-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
     transition: 0.7s ease;
 }
 
 .info-back .work:hover {
-    transform: scale(1.1);
     color: #E91E63;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .icons a{
     color: white;
     font-size: 1.7em;
     padding-right: 30px;
+}
+
+.info-back .icons a:hover i {
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+    to {
+        -webkit-transform: rotate(1turn);
+        -moz-transform: rotate(1turn);
+        -ms-transform: rotate(1turn);
+        -o-transform: rotate(1turn);
+        transform: rotate(1turn);
+}
 }
 
 .title {
@@ -152,14 +181,26 @@ section {
 .content .card {
     padding: 25px;
     width: 21.5em;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
     border-radius: 15px;
     box-shadow: 0 5px 25px  rgba(1 1 1 / 50%);
     margin: 20px;
+    -webkit-transition: 0.7s ease;
+    -moz-transition: 0.7s ease;
+    -ms-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
     transition: 0.7s ease;
     background-color: white;
 }
 
 .content .card:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
     transform: scale(1.1);
     border: 5px solid #009688;
     border-bottom-color: #e91e69;
@@ -205,12 +246,24 @@ section {
     min-height: 14em;
     overflow: hidden;
     width: 20em;
-    border-radius: 10px;
     margin: 20px;
+    -webkit-transition: 0.7s ease;
+    -moz-transition: 0.7s ease;
+    -ms-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
     transition: 0.7s ease;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
 }
 
 .skills .skill-card:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
     transform: scale(1.1);
 }
 
@@ -220,8 +273,12 @@ section {
 }
 
 .skills .skill-card:hover .skill-image img{
-    transform: skewX(10deg) scale(1.2);
     opacity: 0.5;
+    -webkit-transform: skew(10deg) scale(1.2);
+    -moz-transform: skew(10deg) scale(1.2);
+    -ms-transform: skew(10deg) scale(1.2);
+    -o-transform: skew(10deg) scale(1.2);
+    transform: skew(10deg) scale(1.2);
 }
 
 .skill-info {
@@ -294,14 +351,29 @@ section {
     padding: 0 12px 0 0;
 }
 
-
-@media (min-width: 1201px) and (max-width: 1399) {
+@media (min-width: 1400) {
     .content {
         align-items: center;
         justify-content: center;
     }
     .content .card {
-        width: 20em;
+        width: 25em;
+    }
+    .skills .skill-card {
+        width: 25em;
+    }
+}
+
+@media (max-width: 1399) {
+    .content {
+        align-items: center;
+        justify-content: center;
+    }
+    .content .card {
+        width: 25em;
+    }
+    .skills .skill-card {
+        width: 25em;
     }
 }
 
@@ -328,6 +400,12 @@ section {
     .content {
         align-items: center;
         justify-content: center;
+    }
+    .content .card {
+        width: 25em;
+    }
+    .skills .skill-card {
+        width: 25em;
     }
 }
 
@@ -742,6 +820,4 @@ section {
         font-size: 2.5em;
     }
 }
-
-
 
